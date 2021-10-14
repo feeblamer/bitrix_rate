@@ -3,28 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <title>Курс валют</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
-	<h2> Курс валют на {{ date }} </h2>
+<body style="background-image:url({{ url_for('static', filename='background.png') }});">
+
+       <h2> Курс валют на {{ date }} </h2>
+
+       <div class="table-background">
 	<table>
 		<tr>
-    			<th>Буквенный код</th>
+    			<th>Букв. код</th>
     			<th>Курс</th>
-    			<th>Количество едениц</th>
+    			<th>Кол-во едениц</th>
     			<th>Валюта</th>
  		 </tr>
 
-		{% for currensy in currencies %}
+		{% for currency in currencies %}
+                        
 			<tr>
-				<td>{{ currensy['alphabetical_code'] }}</td>	
-				<td>{{ currensy['rate'] }}</td>	
-				<td>{{ currensy['units'] }}</td>	
-				<td>{{ currensy['currency'] }}</td>	
+				<td class="code">{{ currency['alphabetical_code'] }}</td>	
+				<td class="rate">{{ currency['rate'] }}</td>	
+				<td class="unit">{{ currency['units'] }}</td>	
+				<td class="currency">{{ currency['currency'] }}</td>	
 			</tr>
 		{% endfor %}
 	
 	</table>
-  
+        </div>
 
 </body>
 </html>

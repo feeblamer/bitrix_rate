@@ -1,0 +1,39 @@
+h2{
+text-align: center;
+font-weight: normal;
+}
+
+
+table{
+width:100%;
+margin:0 auto;
+margin-top: 100px;
+height:300px;
+}
+
+.table-background{
+width:50%;
+margin:0 auto;
+background-color:#FFEADB
+}
+
+table td:first-child {text-align: center;}
+
+th{
+background-color:#637373;
+color:#ffffff;
+font-size:18pt;
+}
+
+.unit{
+    text-align:center;
+}
+.currency{
+    
+    text-align:center;
+}
+
+td{
+font-size: 20pt;
+
+}
